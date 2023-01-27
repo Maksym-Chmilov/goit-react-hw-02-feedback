@@ -23,7 +23,9 @@ export class App extends Component {
   };
 
   handleLeaveFeedback = e => {
-    this.setState({ [e]: this.state[e] + 1 });
+    this.setState(preState => ({
+      [e]: preState[e] + 1,
+    }));
   };
 
   render() {
